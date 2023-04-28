@@ -24,7 +24,7 @@ object Dependencies {
   val InfluxDBJavaVersion = "2.15"
 
   val AwsSdk2Version = "2.17.113"
-  val AwsSpiPekkoHttpVersion = "0.1.0-SNAPSHOT"
+  val AwsSpiPekkoHttpVersion = "0.1.1"
   // Sync with plugins.sbt
   val PekkoGrpcBinaryVersion = "2.1"
   val PekkoHttpVersion = "0.0.0+4338-c98db6bd-SNAPSHOT"
@@ -83,7 +83,8 @@ object Dependencies {
   val AwsLambda = Seq(
     libraryDependencies ++= Seq(
       "org.apache.pekko" %% "pekko-http" % PekkoHttpVersion, // ApacheV2
-      ("com.github.pjfanning" %% "aws-spi-pekko-http" % AwsSpiPekkoHttpVersion).excludeAll( // ApacheV2
+      ("com.github.pjfanning" %% "aws-spi-pekko-http" % 
+      ).excludeAll( // ApacheV2
 
         ExclusionRule(organization = "org.apache.pekko")),
       ("software.amazon.awssdk" % "lambda" % AwsSdk2Version).excludeAll( // ApacheV2
